@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+
+
+# The settings in this file have been written using guidance from
+# Matthew Watson (@mwtsn) - http://mwatson.co.uk/getting-started-vagrant/
+# and of course the Vagrant documentation - http://docs.vagrantup.com/v2/
+
+
+
+# Update the advanced packaging tool on the box
+apt-get update
+
+# Install the LAMP stack / upgrade where necessary
+apt-get install -y build-essential ruby1.9.1-dev apache2
+/opt/vagrant_ruby/bin/gem install jekyll rdiscount --no-ri --no-rdoc
+
+# We're going to need a directory to put all of our build files in, seperate from the configuration files that we'll be using to actually generate them.
+if [ ! -d /vagrant/public ];
+then
+    mkdir /vagrant/public
+fi
+
+# If we haven't already pointed apache at this new directory, do it now
+if [ ! -h /var/www ];
+then
+    rm -rf /var/www
+    ln -s /vagrant/public /var/www
+    a2enmod rewrite
+    sed -i '/AllowOverride None/c AllowOverride All' /etc/apache2/sites-available/default
+    service apache2 restart
+fi
+
+# If we haven't already install Jekyll, then put it in the build directory
+if [ ! -f /vagrant/_config.yml ];
+then
+    cd /vagrant
+    jekyll new ./ --force
+    sed -i "$ a\exclude: ['Vagrantfile', 'Vagrantprov', 'LICENSE', 'README.md', 'Gruntfile.js', 'package.json', 'node_modules', 'scss']" ./_config.yml
+    sed -i "$ a\destination: 'public'" ./_config.yml
+    rm css/*.css
+    sed -i "$ a\.vagrant" ./.gitignore
+    sed -i "$ a\node_modules" ./.gitignore
+    sed -i "$ a\public" ./.gitignore
+fi

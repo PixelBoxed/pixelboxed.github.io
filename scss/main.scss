@@ -1,0 +1,46 @@
+@import "normalise";
+
+
+$primary-color: #d45500;
+$light-grey: #f1f1f1;
+
+
+@font-face
+{
+	font-family: Silom;
+	src: url(../fonts/Silom.otf);
+}
+
+
+body
+{
+	background-color: $light-grey;
+}
+
+.container
+{
+	padding: 20px;
+}
+
+.title
+{
+	font-family: "Silom";
+	font-size: 4em;
+	padding: 0px;
+	text-transform: lowercase;
+	word-spacing: -0.2em;
+}
+
+.button-x
+{
+	background-color: $primary-color;
+	color: $light-grey;
+	padding: 0.1em;
+}
+
+
+/* Helper classes */
+.center
+{
+	text-align: center;
+}
