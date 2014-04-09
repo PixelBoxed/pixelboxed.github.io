@@ -1,4 +1,4 @@
-pixelboxed.github.io
-====================
+Pixel Boxed
+===========
 
 Website development for Pixel Boxed
