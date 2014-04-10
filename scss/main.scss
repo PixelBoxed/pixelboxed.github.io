@@ -3,29 +3,29 @@
 
 $primary-color: #d45500;
 $light-grey: #f1f1f1;
-
-
-@font-face
-{
-	font-family: Silom;
-	src: url(../fonts/Silom.otf);
-}
+$dark-grey: #888888;
+$darker-grey: #222222;
 
 
 body
 {
 	background-color: $light-grey;
+	color: $dark-grey;
+	font-family: "Roboto", cursive;
+	font-size: 2em;
 }
 
 .container
 {
-	padding: 20px;
+	margin: auto;
+	width: 50%;
 }
 
 .title
 {
-	font-family: "Silom", Verdana, Geneva, sans-serif;
-	font-size: 4em;
+	color: $darker-grey;
+	font-family: 'Baumans', cursive;
+	font-size: 3em;
 	padding: 0px;
 	text-transform: lowercase;
 	word-spacing: -0.2em;
