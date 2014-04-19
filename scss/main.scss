@@ -1,46 +1,181 @@
 @import "normalise";
 
+/* Variables */
+$primary-color: #f5f5f5;
+$secondary-color: #2d3540;
+$highlight-color: #d45500;
 
-$primary-color: #d45500;
-$light-grey: #f1f1f1;
-$dark-grey: #888888;
-$darker-grey: #222222;
 
 
+/* DOM level element classes */
 body
 {
-	background-color: $light-grey;
-	color: $dark-grey;
+	background-color: $secondary-color;
+	color: $primary-color;
 	font-family: "Roboto", cursive;
-	font-size: 2em;
+	font-size: 1.6em;
 }
 
+a
+{
+	text-decoration: none;
+}
+
+
+
+/* Common block elements */
 .container
 {
 	margin: auto;
-	width: 50%;
+	max-width: 920px;
+	padding: 0px 20px 0px 20px;
 }
 
-.title
+.button
 {
-	color: $darker-grey;
+	border: solid 1px $primary-color;
+	color: $primary-color;
+	display: inline-block;
+	margin: 30px 0px 30px 0px;
+	padding: 4px 20px 8px 20px;
+}
+
+.button:hover
+{
+	color: $secondary-color;
+	background-color: $primary-color;
+}
+
+.icon
+{
+	color: $highlight-color;
+	display: block;
+	margin: 0px 0px 20px 0px;
+}
+
+
+
+/* Header classes */
+.logo--text
+{
+	color: $primary-color;
 	font-family: 'Baumans', cursive;
-	font-size: 3em;
 	padding: 0px;
 	text-transform: lowercase;
 	word-spacing: -0.2em;
 }
 
-.button-x
+.logo--x
 {
-	background-color: $primary-color;
-	color: $light-grey;
+	background-color: $highlight-color;
+	color: $secondary-color;
 	padding: 0.1em;
+	margin: 0px;
 }
 
+
+
+/* Intro classes */
+.section--intro
+{
+	-webkit-box-shadow: inset 0px -90px 0px 0px $primary-color;
+	-moz-box-shadow: inset 0px -90px 0px 0px $primary-color;
+	box-shadow: inset 0px -90px 0px 0px $primary-color;
+}
+
+.container--intro
+{
+	background-image: url(../img/devices-desktop.png);
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	background-size: 960px;
+	padding-bottom: 540px;
+	text-transform: lowercase;
+}
+
+
+
+/* About classes */
+.section--about
+{
+	background-color: $primary-color;
+	display: inline-block;
+	width: 100%;
+}
+
+.container--about
+{
+	color: $secondary-color;
+	padding: 10px 20px 40px 20px;
+}
+
+
+
+/* Technology classes */
+.container--technologies
+{
+	padding: 20px 20px 20px 20px;
+}
+
+.block--html5
+{
+	padding: 20px 0px 20px 0px;
+}
+
+.block--css3
+{
+	padding: 20px 0px 20px 0px;
+}
+
+@media screen and (min-width: 600px)
+{
+	.block--html5
+	{
+		display: inline-block;
+		padding: 5%;
+		vertical-align: top;
+		width: 40%;
+	}
+
+	.block--css3
+	{
+		display: inline-block;
+		padding: 5%;
+		vertical-align: top;
+		width: 40%;
+	}
+}
+
+
+
+/* Clients classes */
+.section--clients
+{
+	background-color: $primary-color;
+}
+
+.container--clients
+{
+	color: $secondary-color;
+	padding: 20px 20px 20px 20px;
+}
+
+.client--cct
+{
+	background-image: url('../img/logo--cct.png');
+	background-position: center 40px;
+	background-repeat: no-repeat;
+	display: block;
+	padding: 140px 0px 0px 20px;
+}
 
 /* Helper classes */
 .center
 {
 	text-align: center;
+}
+
+.tiny
+{
+	font-size: 0.6em;
 }
