@@ -60,9 +60,14 @@ a
 {
 	color: $primary-color;
 	font-family: 'Baumans', cursive;
+	letter-spacing: 1px;
 	padding: 0px;
 	text-transform: lowercase;
-	word-spacing: -0.2em;
+}
+
+.logo--space
+{
+	display: none;
 }
 
 .logo--x
@@ -114,7 +119,7 @@ a
 /* Technology classes */
 .container--technologies
 {
-	padding: 20px 20px 20px 20px;
+	padding: 40px 20px 40px 20px;
 }
 
 .block--html5
@@ -132,17 +137,17 @@ a
 	.block--html5
 	{
 		display: inline-block;
-		padding: 5%;
+		padding: 0px 0px 0px 5%;
 		vertical-align: top;
-		width: 40%;
+		width: 45%;
 	}
 
 	.block--css3
 	{
 		display: inline-block;
-		padding: 5%;
+		padding: 0px 5% 0px 0px;
 		vertical-align: top;
-		width: 40%;
+		width: 45%;
 	}
 }
 
@@ -157,7 +162,7 @@ a
 .container--clients
 {
 	color: $secondary-color;
-	padding: 20px 20px 20px 20px;
+	padding: 40px 20px 40px 20px;
 }
 
 .client--cct
@@ -167,6 +172,14 @@ a
 	background-repeat: no-repeat;
 	display: block;
 	padding: 140px 0px 0px 20px;
+}
+
+
+
+/* Contact classes */
+.container--contact
+{
+	padding: 40px 20px 40px 20px;
 }
 
 /* Helper classes */
