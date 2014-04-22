@@ -122,14 +122,18 @@ a
 	padding: 40px 20px 40px 20px;
 }
 
-.block--html5
+@media screen and (max-width: 599px)
 {
-	padding: 20px 0px 20px 0px;
-}
 
-.block--css3
-{
-	padding: 20px 0px 20px 0px;
+	.block--html5
+	{
+		padding: 20px 0px 20px 0px;
+	}
+
+	.block--css3
+	{
+		padding: 20px 0px 20px 0px;
+	}
 }
 
 @media screen and (min-width: 600px)

@@ -58,6 +58,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-jekyll');
 
-  grunt.registerTask('build', ['jekyll', 'htmlmin']);
+  grunt.registerTask('build', ['jekyll']);
   grunt.registerTask('default', ['watch']);
 }
