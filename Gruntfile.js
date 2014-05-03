@@ -39,7 +39,7 @@ module.exports = function(grunt) {
         tasks: ['sass']
       },
       html: {
-        files: ['**/*.html', '!public/**/*'],
+        files: ['**/*.html', '**/*.md', '!public/**/*'],
         tasks: ['build']
       },
       css: {
@@ -59,5 +59,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
 
   grunt.registerTask('build', ['jekyll']);
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['build', 'watch']);
 }

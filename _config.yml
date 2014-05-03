@@ -3,3 +3,4 @@ markdown: redcarpet
 pygments: true
 exclude: ['Vagrantfile', 'Vagrantprov', 'LICENSE', 'README.md', 'Gruntfile.js', 'package.json', 'node_modules', 'scss']
 destination: 'public'
+permalink: none
