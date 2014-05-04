@@ -38,12 +38,6 @@ a
 	padding: 4px 20px 8px 20px;
 }
 
-.button-dark
-{
-	border: solid 1px $secondary-color;
-	color: $secondary-color;
-}
-
 .button-light
 {
 	border: solid 1px $primary-color;
@@ -54,12 +48,6 @@ a
 {
 	color: $secondary-color;
 	background-color: $primary-color;
-}
-
-.button-dark:hover
-{
-	background-color: $secondary-color;
-	color: $primary-color;
 }
 
 .icon
@@ -255,9 +243,4 @@ a
 .small
 {
 	font-size: 0.6em;
-}
-
-.hidden
-{
-	display: none;
 }
